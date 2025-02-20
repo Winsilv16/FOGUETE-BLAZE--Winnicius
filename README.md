@@ -87,5 +87,11 @@ def carregar_recorde():
 def salvar_recorde(recorde):
     with open("recorde.txt", "w") as f:
         f.write(str(recorde))
-    
+
+clock = pygame.time.Clock()
+pontuacao = 0
+recorde = carregar_recorde() 
+game_over = False
+running = True
+no_menu = True    
 
