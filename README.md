@@ -64,7 +64,7 @@ class Asteroide(pygame.sprite.Sprite):
             self.speedy = random.randrange(1, 8)
 
 def exibir_placar(surf, texto, tamanho, x, y):
-    fonte = pygame.font.Font(None, tamanho)  # Usando a fonte padrão
+    fonte = pygame.font.Font(None, tamanho)  
     texto_surface = fonte.render(texto, True, branco)
     texto_rect = texto_surface.get_rect()
     texto_rect.midtop = (x, y)  
