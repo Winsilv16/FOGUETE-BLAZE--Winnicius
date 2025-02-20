@@ -121,3 +121,13 @@ for i in range(8):
     a = Asteroide()
     todos_sprites.add(a)
     asteroides.add(a)
+
+while running:
+    if game_over:
+        tela.fill(preto)
+        desenhar_texto(tela, "GAME OVER", 64, vermelho, largura // 2, altura // 4)
+        desenhar_texto(tela, "Pontuação: " + str(pontuacao), 32, branco, largura // 2, altura // 2)
+        desenhar_texto(tela, "Recorde: " + str(recorde), 32, branco, largura // 2, altura // 2 + 50)
+        desenhar_texto(tela, "Pressione qualquer tecla para jogar novamente", 24, branco, largura // 2, altura * 3 // 4)
+        pygame.display.flip()
+    
