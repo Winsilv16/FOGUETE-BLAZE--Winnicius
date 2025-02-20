@@ -167,4 +167,15 @@ while running:
             game_over = True
             if pontuacao > recorde:
                 recorde = pontuacao
-                salvar_recorde(recorde)         
+                salvar_recorde(recorde)    
+
+        tela.blit(fundo_img, (0, 0))  
+        todos_sprites.draw(tela)
+        exibir_placar(tela, "Pontuação: " + str(pontuacao), 24, largura // 2, 10)
+        exibir_placar(tela, "Recorde: " + str(recorde), 24, largura // 4, 10) 
+        pygame.display.flip()
+
+        pontuacao += 1
+
+
+pygame.quit()       
