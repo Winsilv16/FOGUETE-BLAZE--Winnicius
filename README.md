@@ -151,3 +151,11 @@ while running:
                         todos_sprites.add(a)
                         asteroides.add(a)
                     pontuacao = 0
+
+                    
+    else:
+        clock.tick(60)
+    
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
