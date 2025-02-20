@@ -159,3 +159,12 @@ while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
+        todos_sprites.update()
+
+        colisoes = pygame.sprite.spritecollide(nave, asteroides, False)
+        if colisoes:
+            game_over = True
+            if pontuacao > recorde:
+                recorde = pontuacao
+                salvar_recorde(recorde)         
